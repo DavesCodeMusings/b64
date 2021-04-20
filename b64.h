@@ -20,6 +20,10 @@
 #include <stddef.h>
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*
  * b64enclen
  *   Given number of binary bytes, calculate the number of characters needed
@@ -72,5 +76,9 @@ size_t b64declen(char * enc, size_t enc_len);
  *   be used to properly size the array intended to hold the encoded output.
  */
 int b64dec(char *enc, char *dec, size_t enc_len);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
